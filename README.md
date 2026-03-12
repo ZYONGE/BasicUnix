@@ -1,46 +1,93 @@
-
-<div>   
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux Badge" />
-  <img src="https://img.shields.io/badge/Unix-000000?style=for-the-badge&logoColor=white" alt="Unix Badge" />
-</div>
+<div align="center">
 
 # BasicUnix
 
-Practice and learn the basic concepts and usage of Unix through hands-on exercises.
+Source code for the **Basic Unix** course
+
+</div>
+
+<img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"/>
+
+---
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [Tech Stack](#tech-stack)
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [License](#license)
+- [Author](#author)
+- [Motivation](#motivation)
+
+
+---
+## Project Overview
+**Course:** Basic Unix
+
+**University:** Tech University of Korea (TUK)
+
+This repository contains practice code created while studying **Unix usage**.
+
+The purpose of this project is to:
+
+- practice core concepts of **Directory management**
+- organize lecture exercises
+- build a structured learning record
+
+---
 
 ## Tech Stack
-- unix
-- Linux
-- Shell
+
+### Tools
+
+- Git
+- GitHub
 - Terminal
+- Visual Studio Code
 
-## Feature
-- Practice basic Unix and Linux commands
+### Environment
 
-## How to Compile and Run
+- Linux
+- WSL
+- Bash
 
-```bash
-# Run in WSL, Git Bash, or a Linux-compatible terminal
-bash filename.sh
-```
+---
+
+## Features
+
+This repository includes examples that demonstrate:
+
+- Basic concepts of Unix and Linux
+- File and directory management
+- Basic terminal commands
+- Terminal shortcut keys
+
 
 ## Project Structure
 
 ```
 BasicUnix/
-├── .gitignore
-├── chap01/
-├── chap02/
+├── Chap_[01]/                #
+├── Chap_[02]/                #
+├── Chap_[03]/                # 
 ├── ...
-├── scripts/
+├── LICENSE     # MIT License
+├── .gitignore
 └── README.md
 ```
 
+---
+
 ## License
-This project was created for educational purposes. Free to use for study and practice.
+
+This project is licensed under the MIT License.
+
+See the [LICENSE](LICENSE) file for details.
+
 
 ## Author
 Name: Jiyong Kim (ZYONGE)  
 Profile: https://github.com/ZYONGE  
 
-Motivation: This repository was created to store and review the practice exercises from the Basic Unix course.
+## Motivation
+To build a foundational understanding of **Unix** through structured practice and experimentation.
