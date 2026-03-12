@@ -1,12 +1,12 @@
 <div align="center">
 
-# BasicUnix
+# DataStructure
 
-Source code for the **Basic Unix** course
+Source code for the **DataStructure** course
 
 </div>
 
-<img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"/>
+<img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white"/>
 
 ---
 ## Table of Contents
@@ -22,15 +22,14 @@ Source code for the **Basic Unix** course
 
 ---
 ## Project Overview
-**Course:** Basic Unix
-
+**Course:** DataStructure  
 **University:** Tech University of Korea (TUK)
 
-This repository contains practice code created while studying **Unix usage**.
+This repository contains practice code created while studying **data structure**.
 
 The purpose of this project is to:
 
-- practice core concepts of **Directory management**
+- practice core concepts of data structure
 - organize lecture exercises
 - build a structured learning record
 
@@ -38,18 +37,9 @@ The purpose of this project is to:
 
 ## Tech Stack
 
-### Tools
+### Language
 
-- Git
-- GitHub
-- Terminal
-- Visual Studio Code
-
-### Environment
-
-- Linux
-- WSL
-- Bash
+- C
 
 ---
 
@@ -57,19 +47,19 @@ The purpose of this project is to:
 
 This repository includes examples that demonstrate:
 
-- Basic concepts of Unix and Linux
-- File and directory management
-- Basic terminal commands
-- Terminal shortcut keys
+- Stack implementation
+- Queue implementation
+- Linked List implementation
+- Basic tree structures
+- and so on...
 
 
 ## Project Structure
 
 ```
-BasicUnix/
+DataStructure/
 ├── Chap_[01]/                #
 ├── Chap_[02]/                #
-├── Chap_[03]/                # 
 ├── ...
 ├── LICENSE     # MIT License
 ├── .gitignore
@@ -89,5 +79,5 @@ See the [LICENSE](LICENSE) file for details.
 Name: Jiyong Kim (ZYONGE)  
 Profile: https://github.com/ZYONGE  
 
-## Motivation
-To build a foundational understanding of **Unix** through structured practice and experimentation.
+## Motivation: 
+To build a foundational understanding of data structure through structured practice and experimentation.
