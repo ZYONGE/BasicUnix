@@ -9,18 +9,6 @@ Source code for the **BasicUnix** course
 <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"/>
 
 ---
-## Table of Contents
-
-- [Project Overview](#project-overview)
-- [Tech Stack](#tech-stack)
-- [Features](#features)
-- [Project Structure](#project-structure)
-- [License](#license)
-- [Author](#author)
-- [Motivation](#motivation)
-
-
----
 ## Project Overview
 **Course:** BasicUnix  
 **University:** Tech University of Korea (TUK)
