@@ -1,0 +1,33 @@
+Computational Stochastic Optimization and Learning
+As of Sept 1, 2020, I have retired from Princeton University.  I am now the Chief Analytics Officer of Optimal Dynamics which licensed my library for truckload trucking and dynamic resource allocation.  
+
+I am pleased to announce that I recently won the Robert Herman Lifetime Achievement Award from the Society for Transportation Science and Logistics within Informs.  Click here for the video I prepared for the award that summarized my life path that led to my universal framework for sequential decision problems.
+
+Warren Powell
+Professor Emeritus, Princeton University
+
+================================
+
+CASTLE Labs works to advance the development of modern analytics for solving a wide range of applications that involve decisions under uncertainty. 
+
+New book!  Reinforcement Learning and Stochastic Optimization: A unified framework for sequential decisions.  
+
+New resource page for sequential decision analytics: https://tinyurl.com/sdalinks/
+
+We have initiated a new field we are calling Sequential Decision Analytics which offers a universal framework for sequential decision problems under uncertainty, which unifies 15 different communities that all deal with decisions under uncertainty.
+Teaching – We now teach this framework to both undergraduates and graduate students across a range of departments.
+We have created a new class of policy based on the idea of parameterizing a deterministic optimization model for solving complex stochastic problems.  We call this “parametric cost function approximations.”
+What is AI? – My attempt at describing “artificial intelligence.”
+What is reinforcement learning? – My attempt at describing “reinforcement learning.”
+Surrounding the core activities in methodology are laboratories focusing on major areas of application:
+
+PENSA – The Princeton Laboratory for Energy Systems Analysis – PENSA addresses a variety of stochastic optimization problems in energy systems, including energy storage, stochastic unit commitment, bidding, and pricing.  Click here for our work on energy storage.
+Transportation and logistics laboratory – Our work in transportation and logistics dates to 1981, and spans stochastic fleet management in trucking, rail and air, real-time dispatching, routing and scheduling, and spare parts management, to name a few. Our work has been adopted by a broad cross section of the industry.
+Optimal learning – This research addresses the challenges of collecting information, when information (observations, simulations, laboratory and field experiments) are expensive. 
+Health sciences – Projects in health have included drug discovery, drug delivery, blood management, dosage decisions, personal health, and health policy.
+I hope you find the material interesting, and perhaps useful. If you have any questions, please contact me.
+
+Warren Powell
+email: wbpowell328@gmail.com
+
+Proudly powered by WordPress

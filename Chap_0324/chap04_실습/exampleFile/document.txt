@@ -1,0 +1,84 @@
+My mane is Gil-dong Hong.
+I wake up in the morning.
+This is a living loom.
+And that¡¯s a bedloom.
+
+DeepLearning Models for Human Activity Recognition
+
+Human activity recognition, or HAR, is a challenging time series classification task.
+
+It involves predicting the movement of a person based on sensor data and traditionally involves deep domain expertise and methods from signal processing to correctly engineer features from the raw data in order to fit a machine learning model.
+
+Recently, deeplearning methods such as convolutional neural networks and recurrent neural networks have shown capable and even achieve state-of-the-art results by automatically learning features from the raw sensor data.
+
+In this post, you will discover the problem of human activity recognition and the deeplearning methods that are achieving state-of-the-art performance on this problem.
+
+After reading this post, you will know:
+
+Activity recognition is the problem of predicting the movement of a person, often indoors, based on sensor data, such as an accelerometer in a smartphone.
+Streams of sensor data are often split into subs-sequences called windows, and each window is associated with a broader activity, called a sliding window approach.
+Convolutional neural networks and long short-term memory networks, and perhaps both together, are best suited to learning features from raw sensor data and predicting the associated movement.
+Kick-start your project with my new book DeepLearning for Time Series Forecasting, including step-by-step tutorials and the Python source code files for all examples.
+
+Overview
+This post is divided into five parts; they are:
+
+Human Activity Recognition
+Benefits of Neural Network Modeling
+Supervised Learning Data Representation
+Convolutional Neural Network Models
+Recurrent Neural Network Models
+Human Activity Recognition
+Human activity recognition, or HAR for short, is a broad field of study concerned with identifying the specific movement or action of a person based on sensor data.
+
+Movements are often typical activities performed indoors, such as walking, talking, standing, and sitting. They may also be more focused activities such as those types of activities performed in a kitchen or on a factory floor.
+
+The sensor data may be remotely recorded, such as video, radar, or other wireless methods. Alternately, data may be recorded directly on the subject such as by carrying custom hardware or smart phones that have accelerometers and gyroscopes.
+
+Sensor-based activity recognition seeks the profound high-level knowledge about human activities from multitudes of low-level sensor readings
+
+? DeepLearning for Sensor-based Activity Recognition: A Survey, 2018.
+
+Historically, sensor data for activity recognition was challenging and expensive to collect, requiring custom hardware. Now smart phones and other personal tracking devices used for fitness and health monitoring are cheap and ubiquitous. As such, sensor data from these devices is cheaper to collect, more common, and therefore is a more commonly studied version of the general activity recognition problem.
+
+The problem is to predict the activity given a snapshot of sensor data, typically data from one or a small number of sensor types. Generally, this problem is framed as a univariate or multivariate time series classification task.
+
+It is a challenging problem as there are no obvious or direct ways to relate the recorded sensor data to specific human activities and each subject may perform an activity with significant variation, resulting in variations in the recorded sensor data.
+
+The intent is to record sensor data and corresponding activities for specific subjects, fit a model from this data, and generalize the model to classify the activity of new unseen subjects from their sensor data.
+
+Benefits of Neural Network Modeling
+Traditionally, methods from the field of signal processing were used to analyze and distill the collected sensor data.
+
+Such methods were for feature engineering, creating domain-specific, sensor-specific, or signal processing-specific features and views of the original data. Statistical and machine learning models were then trained on the processed version of the data.
+
+A limitation of this approach is the signal processing and domain expertise required to analyze the raw data and engineer the features required to fit a model. This expertise would be required for each new dataset or sensor modality. In essence, it is expensive and not scalable.
+
+However, in most daily HAR tasks, those methods may heavily rely on heuristic handcrafted feature extraction, which is usually limited by human domain knowledge. Furthermore, only shallow features can be learned by those approaches, leading to undermined performance for unsupervised and incremental tasks. Due to those limitations, the performances of conventional [pattern recognition] methods are restricted regarding classification accuracy and model generalization.
+
+? DeepLearning for Sensor-based Activity Recognition: A Survey, 2018.
+
+Ideally, learning methods could be used that automatically learn the features required to make accurate predictions from the raw data directly. This would allow new problems, new datasets, and new sensor modalities to be adopted quickly and cheaply.
+
+Recently, deep neural network models have started delivering on their promises of feature learning and are achieving stat-of-the-art results for human activity recognition. They are capable of performing automatic feature learning from the raw sensor data and out-perform models fit on hand-crafted domain-specific features.
+
+[¡¦] , the feature extraction and model building procedures are often performed simultaneously in the deeplearning models. The features can be learned automatically through the network instead of being manually designed. Besides, the deep neural network can also extract high-level representation in deep layer, which makes it more suitable for complex activity recognition tasks.
+
+? DeepLearning for Sensor-based Activity Recognition: A Survey, 2018.
+
+There are two main approaches to neural networks that are appropriate for time series classification and that have been demonstrated to perform well on activity recognition using sensor data from commodity smart phones and fitness tracking devices.
+
+They are Convolutional Neural Network Models and Recurrent Neural Network Models.
+
+RNN and LSTM are recommended to recognize short activities that have natural order while CNN is better at inferring long term repetitive activities. The reason is that RNN could make use of the time-order relationship between sensor readings, and CNN is more capable of learning deep features contained in recursive patterns.
+
+? DeepLearning for Sensor-based Activity Recognition: A Survey, 2018.
+
+Supervised Learning Data Representation
+Before we dive into the specific neural networks that can be used for human activity recognition, we need to talk about data preparation.
+
+Both types of neural networks suitable for time series classification require that data be prepared in a specific manner in order to fit a model. That is, in a ¡®supervised learning¡® way that allows the model to associate signal data with an activity class.
+
+A straight-forward data preparation approach that was used both for classical machine learning methods on the hand-crafted features and for neural networks involves dividing the input signal data into windows of signals, where a given window may have one to a few seconds of observation data. This is often called a ¡®sliding window.¡¯
+
+Human activity recognition aims to infer the actions of one or more persons from a set of observations captured by sensors. Usually, this is performed by following a fixed length sliding window approach for the features extraction where two parameters have to be fixed: the size of the window and the shift.
