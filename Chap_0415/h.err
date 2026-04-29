@@ -1,0 +1,13 @@
+total 52
+drwxr-xr-x  3 bn23c009 student  4096  4월 19 00:41 .
+drwxr-xr-x 13 bn23c009 student  4096  4월 17 23:14 ..
+drwxr-xr-x  3 bn23c009 student  4096  4월 17 19:49 class
+-rw-r--r--  1 bn23c009 student   120  4월 18 01:43 ex2.c
+-rw-r--r--  1 bn23c009 student    27  4월 18 14:44 example.txt
+-rw-r--r--  1 bn23c009 student     0  4월 19 00:41 h.err
+-rw-r--r--  1 bn23c009 student    20  4월 19 00:41 h.out
+-rwxr-xr-x  1 bn23c009 student 15960  4월 18 01:40 main
+-rw-r--r--  1 bn23c009 student   235  4월 18 01:38 main.c
+-rw-r--r--  1 bn23c009 student    78  4월 17 19:49 myid.c
+-rw-r--r--  1 bn23c009 student   221  4월 17 22:25 temp2.c
+ls: cannot access '/test': No such file or directory

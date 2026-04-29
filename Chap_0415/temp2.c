@@ -11,5 +11,4 @@ int processList(int *list, int size) {
 int main() {
     printf("Hello, World!\n");
     return 0;
-    //test 1
 }
