@@ -1,28 +1,36 @@
+#=====================================================
+#  실행파일(main_so, main_a)을 만드는 Makefile
+#  - main_so : 공유 라이브러리(.so)로 링크
+#  - main_a  : 정적 라이브러리(.a)로 링크
+#=====================================================
 
-TARGET  = main_so main_a
-WDIR     = .
+# ---- 매크로 정의 ----
+TARGET  = main_so main_a        # 만들 실행파일 2개
+WDIR    = .                     # 작업 디렉터리 (현재 폴더)
+CC      = gcc                   # 컴파일러
 
-CC	 = gcc
+CFLAGS  = -Wall -O3 -D_REENTRANT    # 경고 전체 + 최적화 + 스레드 안전
+CFLAGS += -I${WDIR} -I./include     # 헤더(.h) 검색 경로 추가
 
-CFLAGS   = -Wall -O3 -D_REENTRANT
-CFLAGS  += -I${WDIR} -I./include
+LFLAGS  = -L./ -L./lib          # 라이브러리(.a/.so) 검색 경로
+LFLAGS += -lmylib               # libmylib 링크
 
-LFLAGS  = -L./ -L./lib
-LFLAGS  += -lmylib
+SRCS    = $(wildcard *.c)       # 현재 폴더의 .c 자동 수집
+OBJS    = $(SRCS:.c=.o)         # .c → .o 목록 변환
 
+#=====================================================
+all: ${TARGET} clean            # 두 실행파일 빌드 후 중간파일 청소
+#=====================================================
 
-SRCS    = $(wildcard *.c)
-OBJS	= $(SRCS:.c=.o)
-
-#====================================================
-all: ${TARGET} clean
-#====================================================
+# 공유(.so)로 링크 → 옵션 없이 두면 .so가 기본 선택됨
 main_so : $(SRCS)
-	  $(CC) -shared $(CFLAGS) -o $@ $? $(LFLAGS)
+	$(CC) $(CFLAGS) -o $@ $? $(LFLAGS)
 
+# 정적(.a)으로 링크 → -static 추가로 강제
 main_a : $(SRCS)
-	  $(CC) -static $(CFLAGS) -o $@ $? $(LFLAGS)
+	$(CC) -static $(CFLAGS) -o $@ $? $(LFLAGS)
+
 #-----------------------------------------------------
 clean:
-	rm -f core *.o a.out 
+	rm -f core *.o a.out
 #=====================================================
